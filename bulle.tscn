@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cthtgauo8w6ho"]
+[gd_scene load_steps=4 format=3 uid="uid://rp4laacryy81"]
 
 [ext_resource type="Texture2D" uid="uid://dffo5yatup5ed" path="res://assets/kanelbulle.png" id="1_hdfar"]
 
@@ -16,7 +16,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_tqb1v"]
 radius = 26.0768
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="Bulle" type="RigidBody2D"]
 position = Vector2(16, 13)
 metadata/_edit_group_ = true
 
