@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://h6atb6uitq24"]
+[gd_scene load_steps=5 format=3 uid="uid://h6atb6uitq24"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xsurx"]
 [ext_resource type="PackedScene" uid="uid://rp4laacryy81" path="res://bulle.tscn" id="2_js3tu"]
 [ext_resource type="PackedScene" uid="uid://cc0g2rh55yvj" path="res://player.tscn" id="3_fga3r"]
+[ext_resource type="PackedScene" uid="uid://c4b7426d8lb7n" path="res://wolf.tscn" id="4_qtd5a"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_xsurx")
@@ -10,3 +11,5 @@ bulle_scene = ExtResource("2_js3tu")
 initial_bulle_speed = 1000.0
 
 [node name="Player" parent="." instance=ExtResource("3_fga3r")]
+
+[node name="Wolf" parent="." instance=ExtResource("4_qtd5a")]
