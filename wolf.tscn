@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4b7426d8lb7n"]
+
+[ext_resource type="Texture2D" uid="uid://dap5txtwk2yr6" path="res://wolf.svg" id="1_s6jed"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8m1wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s6jed")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqv0f"]
+size = Vector2(240, 210)
+
+[node name="Wolf" type="RigidBody2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8m1wd")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_pqv0f")
+metadata/_edit_group_ = true

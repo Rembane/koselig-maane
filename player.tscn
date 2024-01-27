@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc0g2rh55yvj"]
+
+[ext_resource type="Texture2D" uid="uid://cqsei56ng3mun" path="res://player-square.svg" id="1_m3uav"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks732"]
+size = Vector2(201, 206)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m6wga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m3uav")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+platform_on_leave = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 2)
+shape = SubResource("RectangleShape2D_ks732")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_m6wga")
+metadata/_edit_group_ = true

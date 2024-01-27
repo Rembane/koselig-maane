@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://rp4laacryy81"]
+
+[ext_resource type="Texture2D" uid="uid://bg4edmuqd2spo" path="res://bulle.svg" id="1_7cxwh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q0hjr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7cxwh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqb1v"]
+radius = 45.0444
+
+[node name="RigidBody2D" type="RigidBody2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_q0hjr")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tqb1v")
+metadata/_edit_group_ = true
