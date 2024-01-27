@@ -22,7 +22,7 @@ func _unhandled_input(event):
 		var bulle_velocity = Vector2.from_angle(player.position.direction_to(event.position).angle()) * initial_bulle_speed
 		var bulle = bulle_scene.instantiate()
 		bulle.linear_velocity = bulle_velocity
-		bulle.position = event.position
+		bulle.position = player.position
 		add_child(bulle)
 
 	if Input.is_action_just_released("mouse_left_click"):
