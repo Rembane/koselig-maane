@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc0g2rh55yvj"]
+[gd_scene load_steps=7 format=3 uid="uid://cc0g2rh55yvj"]
 
-[ext_resource type="Texture2D" uid="uid://cqsei56ng3mun" path="res://player-square.svg" id="1_m3uav"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vmnxx"]
+[ext_resource type="Texture2D" uid="uid://blwosl00x1ewp" path="res://assets/char.png" id="2_v45j6"]
+[ext_resource type="Texture2D" uid="uid://bjmbw7myu3x5t" path="res://assets/charw1.png" id="3_mkspi"]
+[ext_resource type="Texture2D" uid="uid://cee7uhf1m560x" path="res://assets/charw2.png" id="4_bdbpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks732"]
 size = Vector2(201, 206)
@@ -10,10 +12,27 @@ size = Vector2(201, 206)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_m3uav")
+"texture": ExtResource("2_v45j6")
 }],
 "loop": true,
-"name": &"default",
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v45j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mkspi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v45j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bdbpp")
+}],
+"loop": true,
+"name": &"walking",
 "speed": 5.0
 }]
 
@@ -30,4 +49,5 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m6wga")
+animation = &"standing"
 metadata/_edit_group_ = true
