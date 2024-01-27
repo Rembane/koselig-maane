@@ -9,11 +9,11 @@ func _ready():
 	var collision_size = find_child("CollisionShape2D").get_shape().get_rect().size
 	position = Vector2(collision_size.x / 2, screen_size.y - collision_size.y / 2)
 
-func _process(delta):
+func _process(_delta):
 	if walking_speed != 0:
 		position.x += walking_speed
 
-func _unhandled_key_input(event):
+func _unhandled_key_input(_event):
 	if Input.is_action_pressed("walk_left"):
 		$AnimatedSprite2D.flip_h = true
 		$AnimatedSprite2D.play("walking")
