@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cc0g2rh55yvj"]
+[gd_scene load_steps=9 format=3 uid="uid://buq1gjghhvnt6"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vmnxx"]
 [ext_resource type="Texture2D" uid="uid://blwosl00x1ewp" path="res://assets/char.png" id="2_v45j6"]
 [ext_resource type="Texture2D" uid="uid://bjmbw7myu3x5t" path="res://assets/charw1.png" id="3_mkspi"]
+[ext_resource type="Texture2D" uid="uid://c0uic0swax1vh" path="res://assets/char_throw1.png" id="3_nd71t"]
 [ext_resource type="Texture2D" uid="uid://cee7uhf1m560x" path="res://assets/charw2.png" id="4_bdbpp"]
+[ext_resource type="Texture2D" uid="uid://do0vhpjoxi58c" path="res://assets/char_throw2.png" id="4_ip270"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks732"]
 size = Vector2(201, 206)
@@ -16,6 +18,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v45j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nd71t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ip270")
+}],
+"loop": true,
+"name": &"throw",
 "speed": 5.0
 }, {
 "frames": [{
