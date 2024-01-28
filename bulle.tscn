@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://rp4laacryy81"]
+[gd_scene load_steps=5 format=3 uid="uid://rp4laacryy81"]
 
+[ext_resource type="Script" path="res://scripts/bulle.gd" id="1_5srv0"]
 [ext_resource type="Texture2D" uid="uid://dffo5yatup5ed" path="res://assets/kanelbulle.png" id="1_hdfar"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q0hjr"]
@@ -18,6 +19,7 @@ radius = 26.0768
 
 [node name="Bulle" type="RigidBody2D"]
 position = Vector2(16, 13)
+script = ExtResource("1_5srv0")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -30,3 +32,7 @@ metadata/_edit_group_ = true
 position = Vector2(-16, -16)
 shape = SubResource("CircleShape2D_tqb1v")
 metadata/_edit_group_ = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-15, -13)
+scale = Vector2(0.7, 0.7)
