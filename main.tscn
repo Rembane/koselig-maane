@@ -15,7 +15,6 @@ initial_bulle_speed = 1000.0
 position = Vector2(102, 385)
 
 [node name="Wolf" parent="." instance=ExtResource("4_qtd5a")]
-visible = false
 
 [node name="Sky" type="Sprite2D" parent="."]
 z_index = -1
