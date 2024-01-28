@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://h6atb6uitq24"]
+[gd_scene load_steps=6 format=3 uid="uid://h6atb6uitq24"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xsurx"]
 [ext_resource type="PackedScene" uid="uid://rp4laacryy81" path="res://bulle.tscn" id="2_js3tu"]
 [ext_resource type="PackedScene" uid="uid://buq1gjghhvnt6" path="res://player.tscn" id="3_fga3r"]
 [ext_resource type="PackedScene" uid="uid://c4b7426d8lb7n" path="res://wolf.tscn" id="4_qtd5a"]
+[ext_resource type="Texture2D" uid="uid://hgiijjccf61i" path="res://assets/sky.png" id="5_1o8cy"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_xsurx")
@@ -13,3 +14,9 @@ initial_bulle_speed = 1000.0
 [node name="Player" parent="." instance=ExtResource("3_fga3r")]
 
 [node name="Wolf" parent="." instance=ExtResource("4_qtd5a")]
+visible = false
+
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(153, -471)
+texture = ExtResource("5_1o8cy")
