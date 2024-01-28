@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://h6atb6uitq24"]
+[gd_scene load_steps=7 format=3 uid="uid://h6atb6uitq24"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xsurx"]
 [ext_resource type="PackedScene" uid="uid://rp4laacryy81" path="res://bulle.tscn" id="2_js3tu"]
 [ext_resource type="PackedScene" uid="uid://buq1gjghhvnt6" path="res://player.tscn" id="3_fga3r"]
 [ext_resource type="PackedScene" uid="uid://c4b7426d8lb7n" path="res://wolf.tscn" id="4_qtd5a"]
 [ext_resource type="Texture2D" uid="uid://hgiijjccf61i" path="res://assets/sky.png" id="5_1o8cy"]
+[ext_resource type="PackedScene" uid="uid://dvdfwth8s22hp" path="res://ground.tscn" id="6_o1gb0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_xsurx")
@@ -20,3 +21,6 @@ position = Vector2(102, 385)
 z_index = -1
 position = Vector2(634, 377)
 texture = ExtResource("5_1o8cy")
+
+[node name="ground" parent="." instance=ExtResource("6_o1gb0")]
+position = Vector2(636, 112)

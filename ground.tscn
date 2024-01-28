@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvdfwth8s22hp"]
+
+[ext_resource type="Texture2D" uid="uid://c2p2t3io33gc0" path="res://assets/ground.png" id="1_mhoh8"]
+
+[node name="ground" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mhoh8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1793, 412, -220, 438, 173, 569, 687, 548, 773, 382, 1156, 317, 1246, 191, 1796, 201, 1796, 680, -1798, 674)

@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
 @export var walking_speed_multiplier : int
+@onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var walking_speed = 0
 
-func _process(_delta):
-	if walking_speed != 0:
-		position.x += walking_speed
+func _physics_process(delta):
+	velocity = Vector2(walking_speed, gravity) * delta
+	move_and_slide()
 
 func _unhandled_key_input(_event):
 	if Input.is_action_pressed("walk_left"):

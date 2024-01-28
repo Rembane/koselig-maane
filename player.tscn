@@ -56,7 +56,6 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_vmnxx")
 walking_speed_multiplier = 10
