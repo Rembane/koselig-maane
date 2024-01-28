@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://h6atb6uitq24"]
+[gd_scene load_steps=9 format=3 uid="uid://h6atb6uitq24"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xsurx"]
 [ext_resource type="PackedScene" uid="uid://rp4laacryy81" path="res://bulle.tscn" id="2_js3tu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://hgiijjccf61i" path="res://assets/sky.png" id="5_1o8cy"]
 [ext_resource type="PackedScene" uid="uid://dvdfwth8s22hp" path="res://ground.tscn" id="6_o1gb0"]
 [ext_resource type="AudioStream" uid="uid://ws30lq3ylshi" path="res://assets/audio/Winter_Strawberry_Jam.mp3" id="7_57uv3"]
+[ext_resource type="AudioStream" uid="uid://c1qvyvf0svyn1" path="res://assets/audio/BlipBlop-017.wav" id="8_s85lq"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_xsurx")
@@ -26,6 +27,9 @@ texture = ExtResource("5_1o8cy")
 [node name="ground" parent="." instance=ExtResource("6_o1gb0")]
 position = Vector2(636, 112)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_57uv3")
 autoplay = true
+
+[node name="ThrowingSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_s85lq")

@@ -18,6 +18,7 @@ func _ready():
 func _unhandled_input(event):
 	if Input.is_action_just_pressed("mouse_left_click"):
 		player.find_child("AnimatedSprite2D").play("throwing")
+		$ThrowingSound.play()
 		var bulle_velocity = Vector2.from_angle(player.position.direction_to(event.position).angle()) * initial_bulle_speed
 		var bulle = bulle_scene.instantiate()
 		bulle.linear_velocity = bulle_velocity
