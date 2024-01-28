@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c2p2t3io33gc0" path="res://assets/ground.png" id="1_mhoh8"]
 
-[node name="ground" type="Area2D"]
+[node name="ground" type="StaticBody2D"]
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
